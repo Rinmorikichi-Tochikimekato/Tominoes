@@ -1,0 +1,12 @@
+[
+    {
+        "id": "5e37a632b20ba01dbb5173ef",
+        "name": "CGST",
+        "rate": 2.5
+    },
+    {
+        "id": "5e37a63ab20ba01dbb5173f0",
+        "name": "SGST",
+        "rate": 2.5
+    }
+]
