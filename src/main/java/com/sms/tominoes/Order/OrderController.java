@@ -28,6 +28,7 @@ public class OrderController {
 	@PostMapping("/calculatePrice")
 	public ResponseEntity<OrderBeanCalculateResponse> calculatePrice(@RequestBody OrderBeanCalculateRequest order) {
 		try {
+			//System.out.println(order);
 			return new ResponseEntity<OrderBeanCalculateResponse> ( (orderService.calculatePrice(order)),HttpStatus.OK);
 		}
 		catch (Exception e) {
@@ -38,20 +39,21 @@ public class OrderController {
 		
 	}
 	
-	@PostMapping("/placeorder")
+	@PostMapping("/placeOrder")
 	public ResponseEntity<OrderModel> placeOrder(@RequestBody OrderBeanPlaceOrderRequest order){
 		try {
+			//System.out.println(order);
 			return new ResponseEntity<OrderModel>( (orderService.placeOrder(order)) , HttpStatus.CREATED);
 		}
 		catch (Exception e) {
 			// TODO: handle exception
 			System.out.println(e);
-			return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+			return new ResponseEntity<OrderModel>(HttpStatus.INTERNAL_SERVER_ERROR);
 
 		}
 	}
 	
-	@GetMapping("/orders")
+	@GetMapping("/getAllOrders")
 	public ResponseEntity<List<OrderModel>> getAllOrders(){
 			try {
 				return new ResponseEntity<List<OrderModel>> (orderService.getAllOrders(),HttpStatus.OK);
@@ -63,7 +65,7 @@ public class OrderController {
 		
 		}
 		
-	@GetMapping("/order")
+	@GetMapping("/getOrder")
 	public ResponseEntity<Optional<OrderModel>> getOrder(@RequestBody OrderBeanGetRequest orderReq) {
 		
 		//try {

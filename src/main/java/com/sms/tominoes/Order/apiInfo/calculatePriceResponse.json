@@ -1,0 +1,10 @@
+{
+    "pizzaName": "Cheese&Tomato",
+    "topings": [
+        "Tomato",
+        "Olive",
+        "Paneer"
+    ],
+    "crustName": "Cheese Burst",
+    "price": 330.0
+}
