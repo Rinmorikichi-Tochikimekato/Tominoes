@@ -1,7 +1,0 @@
-{
-	"endpoint":"http://localhost:8082/order/calculatePrice",
-	"pizzaName":"Cheese & Tomato",
-	"topings":["Tomato","Olive","Paneer"],
-	"crustName":"Cheese Burst"
-	
-}

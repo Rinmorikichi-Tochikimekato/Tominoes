@@ -1,5 +1,0 @@
-{ 
-   "endpoint":"http://localhost:8082/crust/updateCrustByName",
-   "name":"Pan",
-   "price":10
-}

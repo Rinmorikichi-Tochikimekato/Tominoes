@@ -1,5 +1,0 @@
-{ 
-   "endpoint":"http://localhost:8082/crust/addCrust",
-   "name":"Cheese Burst",
-   "price":80
-}

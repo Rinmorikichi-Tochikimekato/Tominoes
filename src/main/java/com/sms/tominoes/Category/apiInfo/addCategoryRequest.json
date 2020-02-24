@@ -1,9 +1,0 @@
-{
-   "endpoint": "http://localhost:8082/category/addCategory",
-   "name": "Exotic Veg",
-   "pizza": [
-      "Mexican Green Wave",
-      "Peppy Paneer"
-   ],
-   "price": 280
-}

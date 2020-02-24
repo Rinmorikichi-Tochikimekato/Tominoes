@@ -1,5 +1,0 @@
-{
-	"endpoint":"http://localhost:8082/tax/updateTaxField",
-  	"name":"CGST",
-	"rate":4
-}

@@ -1,19 +1,11 @@
 package com.sms.tominoes;
 
-import java.util.Collection;
 import java.util.Collections;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.sms.tominoes.Category.CategoryRepository;
-import com.sms.tominoes.Category.CategoryService;
-import com.sms.tominoes.Crust.CrustService;
-import com.sms.tominoes.Toppings.ToppingsService;
-
-import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
