@@ -1,0 +1,6 @@
+{
+	"endpoint":"http://localhost:8082/tax/addTaxField",
+	 "name": "CGST",
+     "rate":2.5
+	
+}

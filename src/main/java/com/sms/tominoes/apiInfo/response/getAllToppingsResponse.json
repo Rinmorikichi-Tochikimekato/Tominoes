@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Tomato",
+        "price": 10.0
+    },
+    {
+        "name": "Jalepino",
+        "price": 10.0
+    },
+    {
+        "name": "Olive",
+        "price": 20.0
+    },
+    {
+        "name": "Paneer",
+        "price": 20.0
+    },
+    {
+        "name": "Capsicum",
+        "price": 10.0
+    },
+    {
+        "name": "Corn",
+        "price": 10.0
+    },
+    {
+        "name": "Cheese",
+        "price": 30.0
+    }
+]

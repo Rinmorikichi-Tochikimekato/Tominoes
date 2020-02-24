@@ -1,0 +1,14 @@
+{
+    "id": "5e37b9e1463bef6b3bfa4ae2",
+    "pizzaName": "Mexican Green Wave",
+    "topings": [
+        "Tomato",
+        "Olive",
+        "Paneer",
+        "Capsicum"
+    ],
+    "crustName": "Thin",
+    "cgst": 9.5,
+    "sgst": 9.5,
+    "price": 399.0
+}

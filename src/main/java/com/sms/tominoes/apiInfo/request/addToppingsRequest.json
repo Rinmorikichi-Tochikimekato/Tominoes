@@ -1,0 +1,5 @@
+{ 
+   "endpoint":"http://localhost:8082/toppings/addToppings",
+   "name":"Capsicum",
+   "price":10
+}
