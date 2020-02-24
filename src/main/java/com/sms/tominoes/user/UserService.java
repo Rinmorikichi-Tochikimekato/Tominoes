@@ -26,5 +26,12 @@ public class UserService {
 		
 		
 	}
+	
+	
+	public ListOfUsersModel getAllUsers() {
+		
+		return new  ListOfUsersModel( userRepository.findAll());
+		
+	}
 
 }
