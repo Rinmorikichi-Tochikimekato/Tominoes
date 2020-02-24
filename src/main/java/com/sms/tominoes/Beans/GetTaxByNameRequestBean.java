@@ -1,14 +1,13 @@
 package com.sms.tominoes.Beans;
 
-public class GetCategoryRequestBean {
+public class GetTaxByNameRequestBean {
+	public String name;
 
-	private String name;
-
-	public GetCategoryRequestBean() {
+	public GetTaxByNameRequestBean() {
 		super();
 	}
 
-	public GetCategoryRequestBean(String name) {
+	public GetTaxByNameRequestBean(String name) {
 		super();
 		this.name = name;
 	}

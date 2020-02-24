@@ -1,11 +1,15 @@
 package com.sms.tominoes.Beans;
 
 import java.util.List;
-
 import com.sms.tominoes.Model.CrustModel;;
 
 public class GetAllCrustResponseBean {
+
 	List<CrustModel> list;
+
+	public GetAllCrustResponseBean() {
+		super();
+	}
 
 	public GetAllCrustResponseBean(List<CrustModel> list) {
 		super();
@@ -24,6 +28,5 @@ public class GetAllCrustResponseBean {
 	public String toString() {
 		return "GetAllCrustResponseBean [list=" + list + "]";
 	}
-	
-	
+
 }

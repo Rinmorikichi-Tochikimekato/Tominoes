@@ -1,12 +1,16 @@
 package com.sms.tominoes.Beans;
 
 import java.util.List;
-
 import com.sms.tominoes.Model.CategoryModel;
 
 public class GetAllCategoryResponseBean {
 
 	List<CategoryModel> categoryList;
+	
+
+	public GetAllCategoryResponseBean() {
+		super();
+	}
 
 	public GetAllCategoryResponseBean(List<CategoryModel> categoryList) {
 		super();
@@ -25,7 +29,5 @@ public class GetAllCategoryResponseBean {
 	public String toString() {
 		return "CategoryBeanGetAllRequest [categoryList=" + categoryList + "]";
 	}
-	
-	
-	
+
 }

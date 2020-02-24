@@ -2,11 +2,8 @@ package com.sms.tominoes.Service;
 
 import java.util.List;
 import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
 import com.sms.tominoes.Beans.CalculatePriceRequestBean;
 import com.sms.tominoes.Beans.CalculatePriceResponseBean;
 import com.sms.tominoes.Beans.PlaceOrderRequestBean;
@@ -19,52 +16,44 @@ public class OrderService {
 
 	@Autowired
 	CategoryService categoryService;
-	
+
 	@Autowired
 	CrustService crustService;
-	
-	@Autowired 
+
+	@Autowired
 	ToppingsService toppingsService;
-	
+
 	@Autowired
 	OrderRepository orderRepository;
-	
+
 	@Autowired
 	TaxSevice taxSevice;
-	
+
 	public OrderModel placeOrder(PlaceOrderRequestBean order) {
-		// TODO Auto-generated method stub
-		double price= order.getPrice();
-		double cgst = (double)taxSevice.getTaxByName("cgst") * price/100;
-		double sgst = (double)taxSevice.getTaxByName("sgst") * price/100;
-		price += cgst+sgst;
-	
-		
-	 
-		
-		return orderRepository.save(new OrderModel(order.getPizzaName(),order.getTopings(),order.getCrustName(), new OrderPrice(cgst,sgst,order.getPrice(),price) ) );
-		
-	
+		double price = order.getPrice();
+		double cgst = (double) taxSevice.getTaxByName("cgst") * price / 100;
+		double sgst = (double) taxSevice.getTaxByName("sgst") * price / 100;
+		price += cgst + sgst;
+		return orderRepository.save(new OrderModel(order.getPizzaName(), order.getTopings(), order.getCrustName(),
+				new OrderPrice(cgst, sgst, order.getPrice(), price)));
 	}
-	
-	public List<OrderModel> getAllOrders(){
+
+	public List<OrderModel> getAllOrders() {
 		return orderRepository.findAll();
 	}
-	
+
 	public Optional<OrderModel> getOrder(String id) {
 		return orderRepository.findById(id);
 	}
 
 	public CalculatePriceResponseBean calculatePrice(CalculatePriceRequestBean orderModel) {
-		// TODO Auto-generated method stub
-		double price= categoryService.getCategory(orderModel.getPizzaName()).getprice()+crustService.getPriceByName(orderModel.getCrustName());
-		
-		for(String topping : orderModel.getTopings()) {
+		double price = categoryService.getCategory(orderModel.getPizzaName()).getprice()
+				+ crustService.getPriceByName(orderModel.getCrustName());
+		for (String topping : orderModel.getTopings()) {
 			price += toppingsService.getPrice(topping);
 		}
-		
-		return new CalculatePriceResponseBean(orderModel.getPizzaName(), orderModel.getTopings(), orderModel.getCrustName(), price);
+		return new CalculatePriceResponseBean(orderModel.getPizzaName(), orderModel.getTopings(),
+				orderModel.getCrustName(), price);
 	}
 
-	
 }

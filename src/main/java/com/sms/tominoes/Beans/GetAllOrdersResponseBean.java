@@ -2,11 +2,15 @@ package com.sms.tominoes.Beans;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import com.sms.tominoes.Model.OrderModel;
 
 public class GetAllOrdersResponseBean {
+
 	List<OrderModel> list = new ArrayList<>();
+
+	public GetAllOrdersResponseBean() {
+		super();
+	}
 
 	public GetAllOrdersResponseBean(List<OrderModel> list) {
 		super();
@@ -25,6 +29,5 @@ public class GetAllOrdersResponseBean {
 	public String toString() {
 		return "GetAllOrdersResponseBean [list=" + list + "]";
 	}
-	
-	
+
 }

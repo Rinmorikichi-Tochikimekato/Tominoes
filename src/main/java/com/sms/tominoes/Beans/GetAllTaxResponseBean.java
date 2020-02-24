@@ -1,12 +1,15 @@
 package com.sms.tominoes.Beans;
 
 import java.util.List;
-
 import com.sms.tominoes.Model.TaxModel;
 
 public class GetAllTaxResponseBean {
 
 	List<TaxModel> list;
+
+	public GetAllTaxResponseBean() {
+		super();
+	}
 
 	public GetAllTaxResponseBean(List<TaxModel> list) {
 		super();
@@ -25,8 +28,5 @@ public class GetAllTaxResponseBean {
 	public String toString() {
 		return "GetAllTaxResponseBean [list=" + list + "]";
 	}
-	
-	
-	
-	
+
 }

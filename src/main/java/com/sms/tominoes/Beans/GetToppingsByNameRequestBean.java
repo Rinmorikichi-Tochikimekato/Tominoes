@@ -4,6 +4,15 @@ public class GetToppingsByNameRequestBean {
 
 	String name;
 
+	public GetToppingsByNameRequestBean() {
+		super();
+	}
+
+	public GetToppingsByNameRequestBean(String name) {
+		super();
+		this.name = name;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -12,15 +21,4 @@ public class GetToppingsByNameRequestBean {
 		this.name = name;
 	}
 
-	public GetToppingsByNameRequestBean(String name) {
-		super();
-		this.name = name;
-	}
-	
-	public GetToppingsByNameRequestBean() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	
-	
 }

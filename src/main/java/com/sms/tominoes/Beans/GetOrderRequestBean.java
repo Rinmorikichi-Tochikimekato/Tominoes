@@ -25,6 +25,5 @@ public class GetOrderRequestBean {
 	public String toString() {
 		return "OrderBeanGetRequest [id=" + id + "]";
 	}
-	
-	
+
 }

@@ -3,19 +3,22 @@ package com.sms.tominoes.Beans;
 import java.util.List;
 
 public class CalculatePriceResponseBean {
+
 	String pizzaName;
 	List<String> topings;
 	String crustName;
 	double price;
-	
+
 	public CalculatePriceResponseBean() {
 		super();
 	}
 
-	@Override
-	public String toString() {
-		return "OrderBeanCalculateResponse [pizzaName=" + pizzaName + ", topings=" + topings + ", crustName="
-				+ crustName + ", price=" + price + "]";
+	public CalculatePriceResponseBean(String pizzaName, List<String> topings, String crustName, double price2) {
+		super();
+		this.pizzaName = pizzaName;
+		this.topings = topings;
+		this.crustName = crustName;
+		this.price = price2;
 	}
 
 	public String getPizzaName() {
@@ -50,16 +53,10 @@ public class CalculatePriceResponseBean {
 		this.price = price;
 	}
 
-	public CalculatePriceResponseBean(String pizzaName, List<String> topings, String crustName, double price2) {
-		super();
-		this.pizzaName = pizzaName;
-		this.topings = topings;
-		this.crustName = crustName;
-		this.price = price2;
+	@Override
+	public String toString() {
+		return "OrderBeanCalculateResponse [pizzaName=" + pizzaName + ", topings=" + topings + ", crustName="
+				+ crustName + ", price=" + price + "]";
 	}
-	
-	
-	
-	
-	
+
 }

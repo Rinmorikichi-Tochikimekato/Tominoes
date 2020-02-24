@@ -1,8 +1,18 @@
 package com.sms.tominoes.Beans;
 
 public class GetCrustByNameRequestBean {
-	
+
 	public String name;
+
+	
+	public GetCrustByNameRequestBean() {
+		super();
+	}
+
+	public GetCrustByNameRequestBean(String name) {
+		super();
+		this.name = name;
+	}
 
 	public String getName() {
 		return name;
@@ -10,15 +20,6 @@ public class GetCrustByNameRequestBean {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public GetCrustByNameRequestBean(String name) {
-		super();
-		this.name = name;
-	}
-	
-	public GetCrustByNameRequestBean() {
-		// TODO Auto-generated constructor stub
 	}
 
 }
