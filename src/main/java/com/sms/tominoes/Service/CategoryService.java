@@ -37,19 +37,13 @@ public class CategoryService {
 		CategoryModel model = ((mongoTemplate.find(query, CategoryModel.class)).get(0));
 		return new GetCategoryResponseBean(model.getName(), model.getPizza(), model.getprice());
 
-//		for(CategoryModel model : category.findAll()) {
-//			
-//			for(String pizzaName : model.pizza) {
-//				if(pizzaName.contentEquals(name)) {
-//					return model.price;
-//				}
-//			}
-//		}
-//		return null;
+
 	}
+	
 	public CategoryModel getbyName(String name) {
 		return category.findByName(name);
 	}
+	
 	public void removeCategory(CategoryModel cm) {
 		category.delete(cm);
 	}

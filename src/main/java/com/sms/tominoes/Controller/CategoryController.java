@@ -13,9 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sms.tominoes.Beans.GetAllCategoryResponseBean;
 import com.sms.tominoes.Beans.GetCategoryRequestBean;
 import com.sms.tominoes.Beans.GetCategoryResponseBean;
-import com.sms.tominoes.Beans.GetCrustByNameRequestBean;
 import com.sms.tominoes.Model.CategoryModel;
-import com.sms.tominoes.Model.CrustModel;
 import com.sms.tominoes.Service.CategoryService;
 import io.swagger.annotations.ApiOperation;
 

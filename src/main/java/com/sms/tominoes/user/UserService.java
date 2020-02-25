@@ -20,10 +20,8 @@ public class UserService {
 		user.setUsername(user.getUsername());
 		user.setPassword(user.getPassword());
 		
-		
 		userRepository.save(user);
 		return user;
-		
 		
 	}
 	
@@ -32,6 +30,20 @@ public class UserService {
 		
 		return new  ListOfUsersModel( userRepository.findAll());
 		
+	}
+	
+	public boolean checkUser(String name) {
+		if (userRepository.findByUsername(name) == null)
+			return false;
+		return true;
+	}
+	
+	public UserModel getUserByName(String name) {
+		return userRepository.findByUsername(name);
+	}
+	
+	public void deleteUser(UserModel user) {
+		userRepository.delete(user);
 	}
 
 }

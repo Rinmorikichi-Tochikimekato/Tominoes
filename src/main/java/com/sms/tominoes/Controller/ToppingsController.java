@@ -59,6 +59,7 @@ public class ToppingsController {
 				topingsService.updateTopping(updateRequestModel.getName(), updateRequestModel.getPrice()),
 				HttpStatus.OK);
 	}
+	
 	@DeleteMapping("/deleteToppingByName")
 	public void deleteCrust(@RequestBody GetToppingsByNameRequestBean gettopingbyname) {
 	ToppingsModel tm = topingsService.getbyName(gettopingbyname.getName());
