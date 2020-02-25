@@ -1,7 +1,13 @@
 package com.sms.tominoes.Model;
 
+import java.time.LocalDate;
 import java.util.List;
+
+import javax.xml.crypto.Data;
+
 import org.springframework.data.annotation.Id;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class OrderModel {
 
@@ -11,15 +17,19 @@ public class OrderModel {
 	List<String> topings;
 	String crustName;
 	OrderPrice price;
+	
+	@JsonFormat(pattern="dd-MM-yyyy")
+	private LocalDate date;
 
 	public OrderModel() { }
 
-	public OrderModel(String pizzaName, List<String> topings, String crustName, OrderPrice price) {
+	public OrderModel(String pizzaName, List<String> topings, String crustName, OrderPrice price,LocalDate date) {
 		super();
 		this.pizzaName = pizzaName;
 		this.topings = topings;
 		this.crustName = crustName;
 		this.price = price;
+		this.date=date;
 	}
 
 	public String getId() {
@@ -60,12 +70,23 @@ public class OrderModel {
 
 	public void setPrice(OrderPrice price) {
 		this.price = price;
+	
+	}
+
+	public LocalDate getDate() {
+		return date;
+	}
+
+	public void setDate(LocalDate date) {
+		this.date = date;
 	}
 
 	@Override
 	public String toString() {
 		return "OrderModel [id=" + id + ", pizzaName=" + pizzaName + ", topings=" + topings + ", crustName=" + crustName
-				+ ", price=" + price + "]";
+				+ ", price=" + price + ", date=" + date + "]";
 	}
+
+	
 
 }

@@ -1,5 +1,6 @@
 package com.sms.tominoes.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,8 +35,9 @@ public class OrderService {
 		double cgst = (double) taxSevice.getTaxByName("cgst") * price / 100;
 		double sgst = (double) taxSevice.getTaxByName("sgst") * price / 100;
 		price += cgst + sgst;
+		LocalDate date=LocalDate.now(); 
 		return orderRepository.save(new OrderModel(order.getPizzaName(), order.getTopings(), order.getCrustName(),
-				new OrderPrice(cgst, sgst, order.getPrice(), price)));
+				new OrderPrice(cgst, sgst, order.getPrice(), price),date));
 	}
 
 	public List<OrderModel> getAllOrders() {
