@@ -1,6 +1,5 @@
-package com.sms.tominoes.Repository;
+package com.sms.tominoes.order;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
-import com.sms.tominoes.Model.OrderModel;
 
 public interface OrderRepository extends MongoRepository<OrderModel, String> { }

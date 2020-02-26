@@ -1,4 +1,4 @@
-package com.sms.tominoes.Controller;
+package com.sms.tominoes.order;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,8 +15,6 @@ import com.sms.tominoes.Beans.GetAllCrustResponseBean;
 import com.sms.tominoes.Beans.GetAllOrdersResponseBean;
 import com.sms.tominoes.Beans.GetOrderRequestBean;
 import com.sms.tominoes.Beans.PlaceOrderRequestBean;
-import com.sms.tominoes.Model.OrderModel;
-import com.sms.tominoes.Service.OrderService;
 
 @RestController
 

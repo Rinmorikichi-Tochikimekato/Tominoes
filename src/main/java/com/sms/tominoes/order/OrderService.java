@@ -1,4 +1,4 @@
-package com.sms.tominoes.Service;
+package com.sms.tominoes.order;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -8,9 +8,11 @@ import org.springframework.stereotype.Service;
 import com.sms.tominoes.Beans.CalculatePriceRequestBean;
 import com.sms.tominoes.Beans.CalculatePriceResponseBean;
 import com.sms.tominoes.Beans.PlaceOrderRequestBean;
-import com.sms.tominoes.Model.OrderModel;
 import com.sms.tominoes.Model.OrderPrice;
-import com.sms.tominoes.Repository.OrderRepository;
+import com.sms.tominoes.Service.CategoryService;
+import com.sms.tominoes.Service.CrustService;
+import com.sms.tominoes.Service.TaxSevice;
+import com.sms.tominoes.Service.ToppingsService;
 
 @Service
 public class OrderService {

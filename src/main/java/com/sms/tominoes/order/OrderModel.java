@@ -1,4 +1,4 @@
-package com.sms.tominoes.Model;
+package com.sms.tominoes.order;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -8,11 +8,12 @@ import javax.xml.crypto.Data;
 import org.springframework.data.annotation.Id;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.sms.tominoes.Model.OrderPrice;
 
 public class OrderModel {
 
 	@Id
-	String id;
+	int id;
 	String pizzaName;
 	List<String> topings;
 	String crustName;
@@ -32,11 +33,11 @@ public class OrderModel {
 		this.date=date;
 	}
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

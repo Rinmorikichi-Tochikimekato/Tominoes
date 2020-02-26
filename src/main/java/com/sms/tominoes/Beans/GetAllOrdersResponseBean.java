@@ -2,7 +2,8 @@ package com.sms.tominoes.Beans;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.sms.tominoes.Model.OrderModel;
+
+import com.sms.tominoes.order.OrderModel;
 
 public class GetAllOrdersResponseBean {
 

@@ -8,7 +8,6 @@ public class DatabaseSequenceModel {
 	
 	@Id
 	private String id;
-	
 	private int seq;
 	
 	public DatabaseSequenceModel() {
