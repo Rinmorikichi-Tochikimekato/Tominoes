@@ -40,6 +40,13 @@ public class UserController {
 	public ListOfUsersModel getAllUers() {
 		return userService.getAllUsers();
 	}
+	@PostMapping("/getUserByName")
+	public int getUserByName(@RequestBody GetUserRequestBean userBean) {
+		System.out.println("hello");
+		System.out.println(userBean);
+		UserModel um= userService.getUserByName(userBean.getName());
+		return um.getUserId();
+	}
 	
 	@DeleteMapping("/deleteUserByName")
 	public ResponseEntity<Object> deleteUser(@RequestBody GetUserRequestBean userBean) {
