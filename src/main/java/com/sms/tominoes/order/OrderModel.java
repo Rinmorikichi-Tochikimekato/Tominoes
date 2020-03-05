@@ -14,6 +14,7 @@ public class OrderModel {
 
 	@Id
 	int id;
+	int userid;
 	String pizzaName;
 	List<String> topings;
 	String crustName;
@@ -24,13 +25,28 @@ public class OrderModel {
 
 	public OrderModel() { }
 
-	public OrderModel(String pizzaName, List<String> topings, String crustName, OrderPrice price,LocalDate date) {
+	
+
+	public OrderModel (int userid, String pizzaName, List<String> topings, String crustName, OrderPrice price,
+			LocalDate date) {
 		super();
+		
+		this.userid = userid;
 		this.pizzaName = pizzaName;
 		this.topings = topings;
 		this.crustName = crustName;
 		this.price = price;
-		this.date=date;
+		this.date = date;
+	}
+
+
+
+	public int getUserid() {
+		return userid;
+	}
+
+	public void setUserid(int userid) {
+		this.userid = userid;
 	}
 
 	public int getId() {
@@ -82,11 +98,15 @@ public class OrderModel {
 		this.date = date;
 	}
 
+
+
 	@Override
 	public String toString() {
-		return "OrderModel [id=" + id + ", pizzaName=" + pizzaName + ", topings=" + topings + ", crustName=" + crustName
-				+ ", price=" + price + ", date=" + date + "]";
+		return "OrderModel [id=" + id + ", userid=" + userid + ", pizzaName=" + pizzaName + ", topings=" + topings
+				+ ", crustName=" + crustName + ", price=" + price + ", date=" + date + "]";
 	}
+
+	
 
 	
 

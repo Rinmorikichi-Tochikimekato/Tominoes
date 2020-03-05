@@ -38,7 +38,7 @@ public class OrderService {
 		double sgst = (double) taxSevice.getTaxByName("sgst") * price / 100;
 		price += cgst + sgst;
 		LocalDate date=LocalDate.now(); 
-		return orderRepository.save(new OrderModel(order.getPizzaName(), order.getTopings(), order.getCrustName(),
+		return orderRepository.save(new OrderModel(order.getUserid(),  order.getPizzaName(), order.getTopings(), order.getCrustName(),
 				new OrderPrice(cgst, sgst, order.getPrice(), price),date));
 	}
 
