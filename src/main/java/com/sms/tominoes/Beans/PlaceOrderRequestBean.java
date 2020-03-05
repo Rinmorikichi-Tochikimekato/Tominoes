@@ -3,6 +3,8 @@ package com.sms.tominoes.Beans;
 import java.util.List;
 
 public class PlaceOrderRequestBean {
+	int userid;
+	
 
 	String pizzaName;
 	List<String> topings;
@@ -13,14 +15,22 @@ public class PlaceOrderRequestBean {
 		super();
 	}
 
-	public PlaceOrderRequestBean(String pizzaName, List<String> topings, String crustName, double price) {
+	public PlaceOrderRequestBean(int userid, String pizzaName, List<String> topings, String crustName, double price) {
 		super();
+		this.userid = userid;
 		this.pizzaName = pizzaName;
 		this.topings = topings;
 		this.crustName = crustName;
 		this.price = price;
 	}
 
+	public int getUserid() {
+		return userid;
+	}
+
+	public void setUserid(int userid) {
+		this.userid = userid;
+	}
 	public String getPizzaName() {
 		return pizzaName;
 	}
@@ -55,8 +65,9 @@ public class PlaceOrderRequestBean {
 
 	@Override
 	public String toString() {
-		return "OrderBeanPlaceOrderRequest [pizzaName=" + pizzaName + ", topings=" + topings + ", crustName="
-				+ crustName + ", price=" + price + "]";
+		return "PlaceOrderRequestBean [userid=" + userid + ", pizzaName=" + pizzaName + ", topings=" + topings
+				+ ", crustName=" + crustName + ", price=" + price + "]";
 	}
 
+	
 }
