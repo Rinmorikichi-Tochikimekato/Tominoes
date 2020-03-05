@@ -40,10 +40,10 @@ public class UserController {
 	public ListOfUsersModel getAllUers() {
 		return userService.getAllUsers();
 	}
+	
 	@PostMapping("/getUserByName")
 	public int getUserByName(@RequestBody GetUserRequestBean userBean) {
-		System.out.println("hello");
-		System.out.println(userBean);
+		
 		UserModel um= userService.getUserByName(userBean.getName());
 		return um.getUserId();
 	}
@@ -58,6 +58,18 @@ public class UserController {
 		}
 		return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		
+		
+		
+	}
+	
+	@PostMapping("/getUserObjectByName")
+	public ResponseEntity<UserModel> getUserObjectByUsername(@RequestBody GetUserRequestBean nameRequest ){
+		
+		
+		if(userService.checkUser(nameRequest.getName())) {
+			return new ResponseEntity<UserModel> ( userService.getUserByName(nameRequest.getName()),HttpStatus.OK);
+		}
+		return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		
 		
 	}

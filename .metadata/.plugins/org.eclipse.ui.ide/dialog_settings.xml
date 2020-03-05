@@ -39,4 +39,15 @@
 		<item value="org.sonatype.m2e.egit.feature:0.15.1.201806191431"/>
 		<item value="org.sonatype.m2e.mavenarchiver.feature:0.17.4.201905300046"/>
 	</list>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\mohit_nirwan\Desktop\Github\tominoes"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
 </section>
